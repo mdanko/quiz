@@ -1,6 +1,8 @@
 import React from 'react';
+
+import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
-import './bootstrap.min.css';
+
 import { Hero } from './Hero';
 import { Turn, HighlightKey } from './Turn';
 import { Continue } from './Continue';
@@ -27,7 +29,7 @@ interface Props {
 
 export const AuthorQuiz: React.FC<Props> = ({ turnData, highlight, onAnswerSelected, onContinue }) => {
   return (
-    <div className="container-fluid">
+    <Container fluid className="p-3">
       <Hero />
       <Turn {...turnData} highlight={highlight} onAnswerSelected={onAnswerSelected} />
       <Continue show={highlight === "correct"} onContinue={onContinue} />
@@ -35,6 +37,6 @@ export const AuthorQuiz: React.FC<Props> = ({ turnData, highlight, onAnswerSelec
         <Link to="/add">Add an author</Link>
       </p>
       <Footer />
-    </div>
+    </Container>
   );
 };

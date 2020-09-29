@@ -1,11 +1,10 @@
 import React, { Reducer } from 'react';
+
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { shuffle, sample } from 'underscore';
-import './App.css';
 import { AuthorQuiz, Author, TurnData } from './AuthorQuiz';
 import { HighlightKey } from './Turn';
 import { AddAuthor } from './AddAuthor';
-
 
 type Authors = Author[]
 
